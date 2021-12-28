@@ -1,0 +1,31 @@
+{
+   "action": {
+      "default_popup": "index.html",
+      "icons": {
+         "128": "icon.png"
+      }
+   },
+   "background": {
+      "service_worker": "static/js/background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "static/js/content.js" ],
+      "matches": [ "https://opensea.io/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Fastest rarity revealing for NFT collections, snipe with us at TraitSniper",
+   "host_permissions": [ "https://*.opensea.io/*" ],
+   "icons": {
+      "128": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAylq3XbCSTT6vR6+eKDFUAwT7KHyi3GPURhmZ5C7U6x6y6EouxCDd5cSAuazzDkBHOMunfhwyIUr274jCqnX1UpPH9ob6KwB920g92w31oC6FVnyF2u55BUTQ8Zr+kpgybM99jV7Q/4GpyC9F58B+0I2QG70wldZouHDhs1ShCHMn2MJLpPyjtw5CtWexY0zybO5SsylnrLBFjTqdHATehqGis2lYsfG0l4ibU14wF16vkrv8s/E6P+B0oirBKtoMToYzG/byRkkqKI4G9iiWu5TnLENG3TkorHGCkUbGhDXLqXaJb4NZx0nm5X/zTaEFbc4g5EU1UBnKUZYFjyBGkwIDAQAB",
+   "manifest_version": 3,
+   "name": "TraitSniper",
+   "permissions": [ "webRequest", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.8",
+   "web_accessible_resources": [ {
+      "matches": [ "https://*.opensea.io/*" ],
+      "resources": [ "static/js/*", "static/js/pageContextInject.js" ]
+   } ]
+}
